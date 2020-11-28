@@ -1,13 +1,23 @@
-import React from 'react';
-import { useRouteMatch } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { AppContext, Types } from '../../context';
 
-interface HomeProps {}
+const Products: React.FC = ({ children }) => {
+  const { state, dispatch } = useContext(AppContext);
 
-const Home: React.FC<HomeProps> = ({}) => {
-  const match = useRouteMatch();
-  console.log(match);
-  
-  return <div>WOOT!!</div>;
+  return (
+    <div>
+      <button
+        onClick={() => {
+          dispatch({
+            type: Types.ADD,
+          });
+        }}
+      >
+        click
+      </button>
+      {state.shoppingCart}
+    </div>
+  );
 };
 
-export default Home;
+export default Products;

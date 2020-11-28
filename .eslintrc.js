@@ -27,7 +27,10 @@ module.exports = {
   ],
   rules: {
     '@typescript-eslint/no-empty-interface': 0,
+    '@typescript-eslint/no-explicit-any': 0,
+    'react/prop-types': 0,
     'no-empty-pattern': 0,
+    'arrow-parens': ['warn', 'as-needed'],
   },
   settings: {
     react: {
