@@ -5,8 +5,9 @@ const Products: React.FC = ({ children }) => {
   const { state, dispatch } = useContext(AppContext);
 
   return (
-    <div>
+    <div className="p-12">
       <button
+        className="bg-green-400 rounded-lg py-2 px-4 mr-4"
         onClick={() => {
           dispatch({
             type: Types.ADD,
